@@ -15,8 +15,8 @@ print "token      :%s" % token
 (resp_headers, containers) = get_account(url, token)
 
 print "\n<response headers>"
-for h in resp_headers.keys():
-    print "%s : %s" % (h, resp_headers[h])
+for (k, v) in resp_headers.items():
+    print "%s : %s" % (k, v)
 print "\n<containers>"
 for c in containers:
     print "%s" % c

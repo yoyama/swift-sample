@@ -12,8 +12,8 @@ conn = Connection(auth_url, user, key)
 (resp_headers, containers) = conn.get_account()
 
 print "<response headers>"
-for h in resp_headers.keys():
-    print "%s : %s" % (h, resp_headers[h])
+for (k, v) in resp_headers.items():
+    print "%s : %s" % (k, v)
 
 print "\n<containers>"
 for c in containers:
